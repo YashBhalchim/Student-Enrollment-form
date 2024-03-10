@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Student Enrollment Form
+    </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<h1 class="title">Student Enrollment Form by Yash</h1>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="fullName" id="fullName" required>
+                    </div>
+                    <div>
+                        <label>Address</label>
+                        <input type="text" name="address" id="address" required>
+                    </div>
+                    <div>
+                        <label>phone no</label>
+                        <input type="number" name="phone" id="phone" maxlength="10" onkeypress="inputonlyNumberKey(event)" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label >Date Of Birth</label>
+                        <input type="date" name="dateofbirth" placeholder="dd-mm-yyyy" value=""  id="dateofbirth" required>
+                    </div>
+        
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <h2>Enrolled Students Details</h2>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>phone no</th>
+                            <th>Email</th>
+                            <th>Date of Birth</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="./enrollment.js"></script>
+</body>
+<footer>
+    <h5>Student Enrollment Form made by Yash Bhalchim</h5>
+    <h5>@all copyright reserved.</h5>
+</footer>
+
+</html>
+
